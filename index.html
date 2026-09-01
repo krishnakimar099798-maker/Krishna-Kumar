@@ -1,438 +1,327 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Kumar</title>
 
-    <title>Krishna Kumar | Personal & Learning Website</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #222;
-            line-height: 1.6;
-        }
+nav{
+    background:#111827;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
 
-        /* Navigation */
-        nav {
-            background: #111827;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:8px;
+    font-weight:bold;
+    font-size:14px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            font-weight: bold;
-            font-size: 14px;
-        }
+.hero{
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
 
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #2563eb, #06b6d4);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
+.hero p{
+    font-size:18px;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:white;
+    color:#2563eb;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
+}
 
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #2563eb;
-            padding: 12px 22px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+h2{
+    text-align:center;
+    color:#1e40af;
+    margin-bottom:30px;
+}
 
-        /* Sections */
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-        }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
 
-        section h2 {
-            text-align: center;
-            font-size: 30px;
-            margin-bottom: 30px;
-            color: #1e40af;
-        }
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #0001;
+}
 
-        /* Cards */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-        }
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+#trading{
+    max-width:none;
+    background:#eef6ff;
+}
 
-        .card h3 {
-            color: #2563eb;
-            margin-bottom: 10px;
-        }
+.trading-box{
+    max-width:1000px;
+    margin:auto;
+}
 
-        /* Trading */
-        #trading {
-            background: #eef6ff;
-            max-width: none;
-        }
+.lesson{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #0001;
+}
 
-        .trading-content {
-            max-width: 1000px;
-            margin: auto;
-        }
+.lesson span{
+    background:#2563eb;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
 
-        .lesson-number {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            font-size: 13px;
-        }
+.lesson h3{
+    margin:15px 0 10px;
+    color:#2563eb;
+}
 
-        .warning {
-            background: #fff7ed;
-            border-left: 5px solid #f97316;
-            padding: 18px;
-            margin-top: 25px;
-            border-radius: 8px;
-        }
+.warning{
+    margin-top:25px;
+    padding:18px;
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    border-radius:8px;
+}
 
-        /* Contact */
-        .contact {
-            text-align: center;
-        }
+.contact{
+    text-align:center;
+}
 
-        .contact a {
-            display: inline-block;
-            margin: 8px;
-            padding: 12px 20px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-        }
+.contact a{
+    display:inline-block;
+    margin:8px;
+    padding:12px 20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+}
 
-        /* Footer */
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
 
-        /* Mobile */
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 32px;
-            }
+@media(max-width:600px){
+    .hero h1{
+        font-size:32px;
+    }
 
-            nav a {
-                display: inline-block;
-                margin: 5px;
-                font-size: 12px;
-            }
-
-            section {
-                padding: 45px 15px;
-            }
-        }
-    </style>
+    nav a{
+        font-size:12px;
+        margin:4px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- Navigation -->
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#trading">Trading Learning</a>
-    <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#trading">📈 Trading Learning</a>
+<a href="#contact">Contact</a>
 </nav>
 
+<section class="hero" id="home">
+<h1>Krishna Kumar</h1>
+<p>Welcome to My Personal & Learning Website</p>
+<a href="#about" class="btn">मेरे बारे में</a>
+</section>
 
-<!-- Home -->
-<header class="hero" id="home">
-    <h1>Krishna Kumar</h1>
-    <p>Welcome to My Personal & Learning Website</p>
-
-    <a href="#about" class="btn">मेरे बारे में जानें</a>
-</header>
-
-
-<!-- About -->
 <section id="about">
-    <h2>👨‍💻 About Me</h2>
-
-    <div class="card">
-        <h3>Krishna Kumar</h3>
-
-        <p>
-            नमस्ते! मेरा नाम Krishna Kumar है।
-            यह मेरी Personal और Learning Website है।
-        </p>
-
-        <p>
-            इस वेबसाइट पर मैं अपनी Education, Skills,
-            Learning Journey और अलग-अलग Educational Topics
-            को व्यवस्थित कर रहा हूँ।
-        </p>
-    </div>
+<h2>👨‍💻 About Me</h2>
+<div class="card">
+<h3>Krishna Kumar</h3>
+<p>
+नमस्ते! मेरा नाम Krishna Kumar है।
+यह मेरी Personal और Learning Website है।
+</p>
+</div>
 </section>
 
-
-<!-- Education -->
 <section id="education">
-    <h2>📚 Education</h2>
+<h2>📚 Education</h2>
+<div class="cards">
 
-    <div class="cards">
+<div class="card">
+<h3>🎓 ITI</h3>
+<p>मैं ITI की पढ़ाई कर रहा हूँ और Technical Skills सीख रहा हूँ।</p>
+</div>
 
-        <div class="card">
-            <h3>🎓 ITI</h3>
-            <p>
-                मैं ITI की पढ़ाई कर रहा हूँ और
-                Technical Skills सीख रहा हूँ।
-            </p>
-        </div>
+<div class="card">
+<h3>📖 Education</h3>
+<p>मैं अपनी पढ़ाई और Knowledge को लगातार बेहतर बना रहा हूँ।</p>
+</div>
 
-        <div class="card">
-            <h3>📖 School Education</h3>
-            <p>
-                अपनी आगे की पढ़ाई और Educational Goals
-                पर भी ध्यान दे रहा हूँ।
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>💡 Self Learning</h3>
-            <p>
-                रोज नई चीजें सीखने और अपने Knowledge
-                को बेहतर बनाने की कोशिश करता हूँ।
-            </p>
-        </div>
-
-    </div>
+</div>
 </section>
 
-
-<!-- Skills -->
 <section id="skills">
-    <h2>💻 Skills & Goals</h2>
+<h2>💻 Skills & Goals</h2>
+<div class="cards">
 
-    <div class="cards">
+<div class="card">
+<h3>💻 Computer</h3>
+<p>Computer और Internet की जानकारी सीखना।</p>
+</div>
 
-        <div class="card">
-            <h3>💻 Computer</h3>
-            <p>
-                Computer और Internet की Basic से
-                Advanced चीजें सीखना।
-            </p>
-        </div>
+<div class="card">
+<h3>🌐 Web Development</h3>
+<p>HTML और CSS से Website बनाना सीखना।</p>
+</div>
 
-        <div class="card">
-            <h3>🌐 Web Development</h3>
-            <p>
-                HTML, CSS और Website Development
-                सीखना।
-            </p>
-        </div>
+<div class="card">
+<h3>🎯 Goal</h3>
+<p>नई Skills सीखना और अपना Career बेहतर बनाना।</p>
+</div>
 
-        <div class="card">
-            <h3>🎯 My Goal</h3>
-            <p>
-                लगातार सीखना, अपनी Skills बढ़ाना
-                और बेहतर Career बनाना।
-            </p>
-        </div>
-
-    </div>
+</div>
 </section>
 
-
-<!-- Trading Learning -->
 <section id="trading">
 
-    <div class="trading-content">
+<div class="trading-box">
 
-        <h2>📈 Trading Learning</h2>
+<h2>📈 Trading Learning</h2>
 
-        <div class="card">
-            <p>
-                इस Section में Stock Market और Trading
-                के Concepts को बिल्कुल Basic Level से
-                समझाया जाएगा।
-            </p>
+<div class="card">
+<p>
+यहाँ Stock Market और Trading को बिल्कुल Basic से सीखेंगे।
+</p>
 
-            <div class="warning">
-                ⚠️ <b>Important:</b>
-                Trading में पैसे लगाने से पहले Knowledge,
-                Risk Management और Practice को समझना जरूरी है।
-                शुरुआत में केवल Educational Learning और
-                Paper Trading पर ध्यान दें।
-            </div>
-        </div>
+<div class="warning">
+⚠️ पहले Trading को समझें और Practice करें।
+Real money लगाने से पहले Risk Management सीखना जरूरी है।
+</div>
+</div>
 
-        <br>
+<br>
 
-        <div class="cards">
+<div class="cards">
 
-            <!-- Lesson 1 -->
-            <div class="card">
-                <span class="lesson-number">LESSON 1</span>
+<div class="lesson">
+<span>LESSON 1</span>
+<h3>📘 Stock Market Basics</h3>
+<p>
+Stock क्या है? Share Market क्या है?
+NSE और BSE क्या हैं?
+</p>
+</div>
 
-                <h3>📘 Stock Market Basics</h3>
+<div class="lesson">
+<span>LESSON 2</span>
+<h3>🕯️ Candlestick</h3>
+<p>
+Open, High, Low और Close को समझेंगे।
+</p>
+</div>
 
-                <p>
-                    Stock क्या होता है?
-                    Company और Share Market का basic
-                    concept समझेंगे।
-                </p>
+<div class="lesson">
+<span>LESSON 3</span>
+<h3>📊 Chart Basics</h3>
+<p>
+Uptrend, Downtrend और Sideways Market सीखेंगे।
+</p>
+</div>
 
-                <p>
-                    सीखेंगे:
-                    Share, Stock Market, NSE, BSE
-                    और Investor का basic meaning।
-                </p>
-            </div>
+<div class="lesson">
+<span>LESSON 4</span>
+<h3>🎯 Support & Resistance</h3>
+<p>
+Chart में Support और Resistance को समझेंगे।
+</p>
+</div>
 
+<div class="lesson">
+<span>LESSON 5</span>
+<h3>🛡️ Risk Management</h3>
+<p>
+Trading में Risk को समझना सीखेंगे।
+</p>
+</div>
 
-            <!-- Lesson 2 -->
-            <div class="card">
-                <span class="lesson-number">LESSON 2</span>
+<div class="lesson">
+<span>LESSON 6</span>
+<h3>📝 Paper Trading</h3>
+<p>
+बिना असली पैसे के Trading की Practice करेंगे।
+</p>
+</div>
 
-                <h3>🕯️ Candlestick</h3>
-
-                <p>
-                    Candlestick Chart क्या है और
-                    Open, High, Low तथा Close
-                    का मतलब क्या होता है।
-                </p>
-            </div>
-
-
-            <!-- Lesson 3 -->
-            <div class="card">
-                <span class="lesson-number">LESSON 3</span>
-
-                <h3>📊 Chart Basics</h3>
-
-                <p>
-                    Price Chart को पढ़ना और
-                    Uptrend, Downtrend तथा
-                    Sideways Market को समझना।
-                </p>
-            </div>
-
-
-            <!-- Lesson 4 -->
-            <div class="card">
-                <span class="lesson-number">LESSON 4</span>
-
-                <h3>🎯 Support & Resistance</h3>
-
-                <p>
-                    Chart में Support और Resistance
-                    levels का basic concept समझना।
-                </p>
-            </div>
-
-
-            <!-- Lesson 5 -->
-            <div class="card">
-                <span class="lesson-number">LESSON 5</span>
-
-                <h3>🛡️ Risk Management</h3>
-
-                <p>
-                    Trading में risk क्या होता है और
-                    किसी भी decision से पहले risk को
-                    समझना क्यों जरूरी है।
-                </p>
-            </div>
-
-
-            <!-- Lesson 6 -->
-            <div class="card">
-                <span class="lesson-number">LESSON 6</span>
-
-                <h3>📝 Paper Trading</h3>
-
-                <p>
-                    बिना असली पैसे के hypothetical
-                    trades लिखकर chart और strategy
-                    की practice करना।
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
-
-<!-- Contact -->
 <section id="contact">
-    <h2>📞 Contact</h2>
+<h2>📞 Contact</h2>
 
-    <div class="card contact">
+<div class="card contact">
+<p>मेरे Social Platforms पर जुड़ें।</p>
 
-        <p>
-            मेरे Social Platforms पर जुड़ें।
-        </p>
+<a href="#">📺 YouTube</a>
+<a href="#">📸 Instagram</a>
+<a href="mailto:example@gmail.com">✉️ Email</a>
 
-        <!-- अपने असली links यहाँ डालना -->
-        <a href="#" target="_blank">📺 YouTube</a>
-
-        <a href="#" target="_blank">📸 Instagram</a>
-
-        <a href="mailto:example@gmail.com">✉️ Email</a>
-
-    </div>
+</div>
 </section>
 
-
-<!-- Footer -->
 <footer>
-    <p>© 2026 Krishna Kumar | All Rights Reserved</p>
-    <p>Learning • Education • Technology</p>
+<p>© 2026 Krishna Kumar</p>
+<p>Education • Technology • Trading Learning</p>
 </footer>
 
 </body>
