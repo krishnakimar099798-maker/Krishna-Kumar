@@ -2,133 +2,147 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Krishna Kumar - Trading Learning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Krishna Kumar Trading Academy</title>
 
 <style>
-*{box-sizing:border-box}
 body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#f1f5f9;
- color:#172033
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f1f5f9;
+    color:#172033;
 }
+
 header{
- background:linear-gradient(135deg,#1d4ed8,#06b6d4);
- color:white;
- text-align:center;
- padding:45px 15px
+    background:#1d4ed8;
+    color:white;
+    text-align:center;
+    padding:40px 15px;
 }
-header h1{font-size:34px}
+
+header h1{
+    font-size:32px;
+}
+
 nav{
- background:#111827;
- padding:14px;
- text-align:center;
- position:sticky;
- top:0;
- z-index:10
+    background:#111827;
+    padding:15px;
+    text-align:center;
 }
+
 nav a{
- color:white;
- text-decoration:none;
- margin:0 8px;
- font-weight:bold
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
 }
+
 .container{
- max-width:1000px;
- margin:auto;
- padding:25px 15px
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
 }
-.progressBox,.lecture{
- background:white;
- padding:22px;
- border-radius:16px;
- margin:20px 0;
- box-shadow:0 4px 15px #0001
+
+.progress-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
 }
+
 .progress{
- height:18px;
- background:#e5e7eb;
- border-radius:20px;
- overflow:hidden
+    height:20px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
 }
-#bar{
- height:100%;
- width:0%;
- background:#16a34a;
- transition:.4s
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:#16a34a;
 }
-.lectures{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:15px
+
+.level{
+    margin-top:35px;
 }
+
+.lessons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:15px;
+}
+
 .card{
- background:white;
- padding:20px;
- border-radius:15px;
- box-shadow:0 4px 12px #0001
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px #0001;
 }
+
+.card h3{
+    color:#2563eb;
+}
+
 button{
- background:#2563eb;
- color:white;
- border:0;
- padding:11px 18px;
- border-radius:25px;
- cursor:pointer;
- font-weight:bold;
- margin:5px
+    background:#2563eb;
+    color:white;
+    border:0;
+    padding:11px 18px;
+    border-radius:20px;
+    cursor:pointer;
 }
-button:hover{opacity:.9}
+
+button:hover{
+    background:#1e40af;
+}
+
+.lesson-page{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:15px;
+}
+
 .video{
- background:#111827;
- color:white;
- height:250px;
- display:flex;
- align-items:center;
- justify-content:center;
- border-radius:12px;
- margin:15px 0;
- text-align:center
+    background:#111827;
+    color:white;
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    text-align:center;
 }
+
 .notes{
- background:#eff6ff;
- padding:18px;
- border-left:5px solid #2563eb;
- border-radius:8px;
- margin:15px 0
+    background:#eff6ff;
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
 }
+
 .quiz{
- background:#f8fafc;
- padding:18px;
- border-radius:12px;
- margin-top:20px
+    background:#f8fafc;
+    padding:20px;
+    margin-top:20px;
+    border-radius:10px;
 }
+
 .quiz label{
- display:block;
- background:white;
- padding:10px;
- margin:7px 0;
- border-radius:8px
+    display:block;
+    background:white;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
 }
-#viewer{display:none}
-#result{
- font-weight:bold;
- margin-top:10px
-}
-.practice{
- background:#ecfdf5;
- padding:18px;
- border-left:5px solid #16a34a;
- border-radius:8px;
- margin-top:15px
-}
+
 footer{
- background:#111827;
- color:white;
- text-align:center;
- padding:25px;
- margin-top:30px
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -141,359 +155,127 @@ footer{
 </nav>
 
 <header id="home">
-<h1>Krishna Kumar 📈</h1>
-<p>Stock Market Learning — Zero to Advanced</p>
-<p>Learn → Practice → Understand Risk</p>
+
+<h1>Krishna Kumar</h1>
+
+<h2>📈 Trading Learning Academy</h2>
+
+<p>Zero से Advanced तक Stock Market सीखें</p>
+
 </header>
 
-<div class="container" id="course">
 
-<div class="progressBox">
+<div class="container">
+
+<div class="progress-box">
+
 <h2>📊 Your Learning Progress</h2>
-<p>
-Completed:
-<span id="count">0</span>/36
-</p>
+
+<p>0 / 60 Lessons Completed</p>
 
 <div class="progress">
-<div id="bar"></div>
+<div class="progress-fill"></div>
 </div>
 
-<p id="percent">0% Complete</p>
+<p>0% Complete</p>
+
+</div>
+
+
+<h2 id="course">📚 Zero to Advanced Course</h2>
+
+<p>
+⚠️ पहले सीखें और Paper Trading से Practice करें।
+Real money लगाने की जल्दी न करें।
+</p>
+
+
+<!-- LEVEL 1 -->
+
+<div class="level">
+
+<h2>🟢 Level 1 — Stock Market Basics</h2>
+
+<div class="lessons">
+
+<div class="card">
+<h3>Lesson 1</h3>
+<p>Stock Market क्या है?</p>
+<button onclick="openLesson('Lesson 1','Stock Market एक market है जहाँ securities की खरीद-बिक्री होती है।')">Start Lesson</button>
 </div>
 
 <div class="card">
-<h3>⚠️ Learning Rule</h3>
-<p>
-यह educational course है। शुरुआत में केवल learning और
-paper practice करें। Market में profit guaranteed नहीं होता।
-</p>
+<h3>Lesson 2</h3>
+<p>Share क्या होता है?</p>
+<button onclick="openLesson('Lesson 2','Share किसी company में ownership का छोटा हिस्सा represent कर सकता है।')">Start Lesson</button>
 </div>
 
-<h2>📚 36 Lectures</h2>
-
-<div class="lectures" id="lectureList"></div>
-
-<div class="lecture" id="viewer">
-
-<h2 id="title"></h2>
-
-<h3>🎥 Video</h3>
-
-<div class="video" id="video">
-Video यहाँ दिखाई देगा
-</div>
-
-<p>
-👉 अपने video को लगाने के लिए नीचे JavaScript में
-video link बदलना होगा।
-</p>
-
-<h3>📸 Notes / Chart</h3>
-
-<div class="notes">
-<p id="photoText">
-यहाँ इस lecture की Notes/Chart photo दिखाई जाएगी।
-</p>
-</div>
-
-<h3>📖 आसान भाषा में समझें</h3>
-
-<p id="explanation"></p>
-
-<div class="practice">
-<h3>✍️ Paper Practice</h3>
-<p>
-इस lesson को बिना असली पैसे के practice करें।
-अपना hypothetical decision copy में लिखें।
-</p>
-</div>
-
-<div class="quiz">
-
-<h3>📝 Objective Question</h3>
-
-<p id="question"></p>
-
-<div id="answers"></div>
-
-<button onclick="checkAnswer()">
-Check Answer
-</button>
-
-<p id="result"></p>
-
-</div>
-
-<button onclick="completeLesson()">
-✅ Complete Lesson
-</button>
-
-<button onclick="nextLesson()">
-➡️ Next Lecture
-</button>
-
-</div>
-
-</div>
-
-<footer>
-<p>© 2026 Krishna Kumar</p>
-<p>📚 Stock Market Learning Website</p>
-</footer>
-
-
-<script>
-
-const lessons=[
-
-"Stock Market क्या है?",
-"Share क्या होता है?",
-"Company पैसे क्यों जुटाती है?",
-"NSE और BSE",
-"IPO क्या है?",
-"Investor और Trader",
-"Demat Account",
-"Buy और Sell",
-"Market Risk",
-"Paper Trading",
-
-"Candlestick क्या है?",
-"Open High Low Close",
-"Timeframe",
-"Volume",
-"Trend",
-"Support",
-"Resistance",
-"Chart Patterns",
-"Moving Average",
-"Technical Analysis",
-
-"Company का Business",
-"Revenue",
-"Profit",
-"Debt",
-"EPS",
-"P/E Ratio",
-"P/B Ratio",
-"Cash Flow",
-"Annual Report",
-"Fundamental Analysis",
-
-"Risk Management",
-"Diversification",
-"Trading Psychology",
-"Trading Journal",
-"Backtesting",
-"Final Revision"
-];
-
-let current=0;
-
-let completed=
-JSON.parse(localStorage.getItem("completedLessons")||"[]");
-
-
-function showLectures(){
-
-let html="";
-
-lessons.forEach((name,index)=>{
-
-let done=completed.includes(index);
-
-html+=`
 <div class="card">
+<h3>Lesson 3</h3>
+<p>Company और Shareholder</p>
+<button onclick="openLesson('Lesson 3','Company और shareholder के basic relationship को समझें।')">Start Lesson</button>
+</div>
 
-<h3>Lecture ${index+1}</h3>
+<div class="card">
+<h3>Lesson 4</h3>
+<p>NSE और BSE</p>
+<button onclick="openLesson('Lesson 4','NSE और BSE भारत के प्रमुख stock exchanges हैं।')">Start Lesson</button>
+</div>
 
-<h4>${name}</h4>
+<div class="card">
+<h3>Lesson 5</h3>
+<p>IPO क्या है?</p>
+<button onclick="openLesson('Lesson 5','IPO यानी Initial Public Offering।')">Start Lesson</button>
+</div>
 
-<p>
-Zero से धीरे-धीरे concept सीखें।
-</p>
+<div class="card">
+<h3>Lesson 6</h3>
+<p>Demat Account</p>
+<button onclick="openLesson('Lesson 6','Demat account securities को electronic form में रखने के लिए इस्तेमाल होता है।')">Start Lesson</button>
+</div>
 
-<button onclick="openLesson(${index})">
-🎓 Start Lesson
-</button>
+<div class="card">
+<h3>Lesson 7</h3>
+<p>Trading Account</p>
+<button onclick="openLesson('Lesson 7','Trading account orders place करने के लिए इस्तेमाल होता है।')">Start Lesson</button>
+</div>
 
-${done ? "<p>✅ Completed</p>":""}
+<div class="card">
+<h3>Lesson 8</h3>
+<p>Broker क्या करता है?</p>
+<button onclick="openLesson('Lesson 8','Broker trading platform और market access जैसी services दे सकता है।')">Start Lesson</button>
+</div>
+
+<div class="card">
+<h3>Lesson 9</h3>
+<p>Buy और Sell</p>
+<button onclick="openLesson('Lesson 9','Buy का अर्थ खरीदना और Sell का अर्थ बेचना है।')">Start Lesson</button>
+</div>
+
+<div class="card">
+<h3>Lesson 10</h3>
+<p>Market Risk</p>
+<button onclick="openLesson('Lesson 10','Stock prices ऊपर या नीचे जा सकते हैं और loss हो सकता है।')">Start Lesson</button>
+</div>
 
 </div>
-`;
-
-});
-
-document.getElementById("lectureList").innerHTML=html;
-
-}
-
-
-function openLesson(index){
-
-current=index;
-
-let name=lessons[index];
-
-document.getElementById("viewer").style.display="block";
-
-document.getElementById("title").innerText=
-"Lecture "+(index+1)+" — "+name;
-
-
-/* VIDEO PLACEHOLDER */
-
-document.getElementById("video").innerHTML=`
-<div>
-🎥<br>
-<b>Lecture ${index+1} Video</b>
-<br><br>
-Video link बाद में यहाँ लगाया जा सकता है।
 </div>
-`;
 
 
-/* NOTES */
+<!-- LEVEL 2 -->
 
-document.getElementById("photoText").innerHTML=
-"📸 Lecture "+(index+1)+" की Notes / Chart यहाँ दिखेगी।";
+<div class="level">
 
+<h2>🔵 Level 2 — Trading Basics</h2>
 
-/* EXPLANATION */
+<div class="lessons">
 
-document.getElementById("explanation").innerText=
-name+
-" को आसान भाषा में समझें। पहले concept समझें, फिर उसे अपनी copy में अपने शब्दों में लिखकर practice करें।";
+<div class="card"><h3>Lesson 11</h3><p>Delivery Trading</p><button onclick="openLesson('Lesson 11','Delivery trading का basic concept सीखें।')">Start Lesson</button></div>
 
+<div class="card"><h3>Lesson 12</h3><p>Intraday Trading</p><button onclick="openLesson('Lesson 12','Intraday trading में position उसी trading day में close की जा सकती है।')">Start Lesson</button></div>
 
-/* QUIZ */
+<div class="card"><h3>Lesson 13</h3><p>Swing Trading</p><button onclick="openLesson('Lesson 13','Swing trading में price movements को कुछ समय तक पकड़ने की कोशिश की जाती है।')">Start Lesson</button></div>
 
-document.getElementById("question").innerText=
-name+" के बारे में आपने क्या सीखा?";
+<div class="card"><h3>Lesson 14</h3><p>Investing vs Trading</p><button onclick="openLesson('Lesson 14','Investing और trading के time horizon और approach अलग हो सकते हैं।')">Start Lesson</button></div>
 
-document.getElementById("answers").innerHTML=`
-
-<label>
-<input type="radio" name="answer" value="0">
-मैंने concept को समझा
-</label>
-
-<label>
-<input type="radio" name="answer" value="1">
-मुझे अभी कुछ नहीं सीखना
-</label>
-
-<label>
-<input type="radio" name="answer" value="2">
-मैं बिना सीखे real money लगाऊँगा
-</label>
-
-`;
-
-document.getElementById("result").innerText="";
-
-document.getElementById("viewer")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-function checkAnswer(){
-
-let selected=
-document.querySelector(
-'input[name="answer"]:checked'
-);
-
-if(!selected){
-
-document.getElementById("result").innerText=
-"⚠️ पहले answer चुनो।";
-
-return;
-}
-
-if(selected.value==="0"){
-
-document.getElementById("result").innerText=
-"✅ सही! अब Lesson Complete कर सकते हो।";
-
-}else{
-
-document.getElementById("result").innerText=
-"❌ पहले lesson को ध्यान से पढ़ो और फिर कोशिश करो।";
-
-}
-
-}
-
-
-function completeLesson(){
-
-if(!completed.includes(current)){
-
-completed.push(current);
-
-localStorage.setItem(
-"completedLessons",
-JSON.stringify(completed)
-);
-
-}
-
-updateProgress();
-
-showLectures();
-
-document.getElementById("result").innerText=
-"🎉 Lecture "+(current+1)+" Complete!";
-
-}
-
-
-function nextLesson(){
-
-if(current<lessons.length-1){
-
-openLesson(current+1);
-
-}else{
-
-alert(
-"🎉 Congratulations! आपने सभी 36 lectures complete कर लिए!"
-);
-
-}
-
-}
-
-
-function updateProgress(){
-
-let total=lessons.length;
-
-let done=completed.length;
-
-let percent=
-Math.round((done/total)*100);
-
-document.getElementById("count").innerText=
-done;
-
-document.getElementById("bar").style.width=
-percent+"%";
-
-document.getElementById("percent").innerText=
-percent+"% Complete";
-
-}
-
-
-showLectures();
-
-updateProgress();
-
-</script>
-
-</body>
-</html>
+<div class="card"><h3>Lesson 15</h3><p>Market Index</p><
