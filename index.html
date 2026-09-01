@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Krishna Kumar | Stock Market Learning</title>
+<title>Krishna Kumar - Stock Market Learning</title>
 
 <style>
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
@@ -22,35 +25,31 @@ body{
 }
 
 nav{
+    background:#111827;
+    padding:15px 10px;
+    text-align:center;
     position:sticky;
     top:0;
     z-index:1000;
-    background:#111827;
-    padding:14px;
-    text-align:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:6px;
-    font-size:14px;
+    margin:5px 8px;
     font-weight:bold;
-}
-
-nav a:hover{
-    color:#38bdf8;
+    font-size:14px;
 }
 
 .hero{
     background:linear-gradient(135deg,#2563eb,#06b6d4);
     color:white;
     text-align:center;
-    padding:75px 20px;
+    padding:70px 20px;
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:40px;
     margin-bottom:10px;
 }
 
@@ -60,14 +59,14 @@ nav a:hover{
 
 .btn{
     display:inline-block;
+    border:0;
     background:#2563eb;
     color:white;
-    border:0;
     padding:11px 20px;
     border-radius:25px;
-    text-decoration:none;
     cursor:pointer;
     font-weight:bold;
+    text-decoration:none;
     margin-top:15px;
 }
 
@@ -79,23 +78,29 @@ nav a:hover{
 section{
     max-width:1100px;
     margin:auto;
-    padding:55px 20px;
+    padding:50px 20px;
 }
 
 .title{
     text-align:center;
     color:#1d4ed8;
     margin-bottom:30px;
-    font-size:30px;
 }
 
-/* Progress */
+.warning{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:30px;
+}
+
 .progress-box{
     background:white;
     padding:20px;
     border-radius:15px;
-    box-shadow:0 5px 20px #0001;
     margin-bottom:30px;
+    box-shadow:0 5px 20px #0001;
 }
 
 .progress-bar{
@@ -103,32 +108,28 @@ section{
     height:18px;
     background:#e5e7eb;
     border-radius:20px;
+    margin-top:10px;
     overflow:hidden;
-    margin-top:12px;
 }
 
 #progress{
-    height:100%;
     width:0%;
+    height:100%;
     background:#2563eb;
-    transition:0.4s;
+    transition:.4s;
 }
 
-/* Level */
 .level{
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
 
 .level h3{
-    color:#111827;
-    margin-bottom:15px;
-    font-size:23px;
+    margin-bottom:18px;
 }
 
-/* Lesson cards */
 .lessons{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:18px;
 }
 
@@ -137,121 +138,79 @@ section{
     padding:22px;
     border-radius:15px;
     box-shadow:0 5px 18px #0001;
-    border-top:4px solid #2563eb;
 }
 
 .lesson-card h4{
     color:#2563eb;
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
 .lesson-card p{
     color:#555;
-    font-size:15px;
 }
 
-.lesson-card .start{
-    background:#2563eb;
+.lesson-card.done{
+    border:2px solid #16a34a;
 }
 
-.lesson-card.completed{
-    border-top-color:#16a34a;
+.lesson-card.done h4{
+    color:#16a34a;
 }
 
-.lesson-card.completed .start{
-    background:#16a34a;
-}
-
-/* Lesson viewer */
-#lessonViewer{
+.viewer{
     display:none;
-    background:#ffffff;
-    border-radius:18px;
-    padding:28px;
-    box-shadow:0 5px 25px #0002;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #0002;
     margin-top:30px;
 }
 
-#lessonViewer h2{
+.viewer h2{
     color:#1d4ed8;
     margin-bottom:15px;
 }
 
-.lesson-content{
-    margin-bottom:25px;
-}
-
-.lesson-content ul{
-    padding-left:22px;
-    margin-top:10px;
-}
-
 .example{
     background:#eff6ff;
-    padding:16px;
     border-left:5px solid #2563eb;
+    padding:15px;
     margin:20px 0;
     border-radius:8px;
 }
 
-/* Quiz */
 .quiz{
     background:#f8fafc;
     padding:20px;
     border-radius:12px;
-    margin-top:20px;
-}
-
-.quiz h3{
-    margin-bottom:12px;
+    margin-top:25px;
 }
 
 .quiz label{
     display:block;
-    padding:10px;
-    margin:7px 0;
     background:white;
+    padding:10px;
+    margin:8px 0;
     border-radius:8px;
     cursor:pointer;
 }
 
-.quiz button{
-    border:0;
-    background:#2563eb;
-    color:white;
-    padding:10px 18px;
-    border-radius:8px;
-    cursor:pointer;
-    margin-top:10px;
-}
-
-#quizResult{
+#result{
     margin-top:12px;
     font-weight:bold;
 }
 
-/* Warning */
-.warning{
-    background:#fff7ed;
-    border-left:5px solid #f97316;
-    padding:18px;
-    border-radius:8px;
-    margin:20px 0;
-}
-
-/* Footer */
 footer{
     background:#111827;
     color:white;
     text-align:center;
     padding:25px;
-    margin-top:30px;
 }
 
 @media(max-width:600px){
 
     .hero h1{
-        font-size:32px;
+        font-size:30px;
     }
 
     nav a{
@@ -260,11 +219,7 @@ footer{
     }
 
     section{
-        padding:40px 14px;
-    }
-
-    #lessonViewer{
-        padding:20px;
+        padding:40px 15px;
     }
 }
 </style>
@@ -272,594 +227,697 @@ footer{
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
 <a href="#home">Home</a>
 <a href="#course">Course</a>
-<a href="#trading">Trading</a>
 <a href="#about">About</a>
 </nav>
 
-
-<!-- HERO -->
 <header class="hero" id="home">
 
 <h1>Krishna Kumar</h1>
 
-<p>
-📚 Stock Market Learning — Zero to Advanced
-</p>
+<p>📈 Stock Market Learning</p>
+<p>Zero से Advanced तक सीखें</p>
 
-<p>
-पहले सीखें • फिर Practice करें • फिर Risk समझें
-</p>
-
-<a href="#course" class="btn">
-Start Learning 🚀
-</a>
+<a href="#course" class="btn">Start Learning 🚀</a>
 
 </header>
 
 
-<!-- COURSE -->
 <section id="course">
 
-<h2 class="title">
-📈 Stock Market Course
-</h2>
+<h2 class="title">📚 Zero to Advanced Course</h2>
+
+<div class="warning">
+⚠️ <b>Important:</b>
+यह educational website है। पहले concepts और paper practice सीखें।
+Profit guaranteed नहीं है और market में loss का risk होता है।
+</div>
+
 
 <div class="progress-box">
 
-<h3>📊 Your Learning Progress</h3>
+<h3>📊 My Learning Progress</h3>
 
 <p>
-Completed:
-<span id="completedCount">0</span> / 36 Lessons
+Complete:
+<span id="count">0</span> / 36 Lessons
 </p>
 
 <div class="progress-bar">
 <div id="progress"></div>
 </div>
 
-<p id="progressText">
-0% Complete
-</p>
-
-</div>
-
-
-<div class="warning">
-
-⚠️ <b>Important:</b>
-यह website educational learning के लिए है।
-पहले concepts और paper practice सीखें।
-किसी भी investment या trading में profit guaranteed नहीं होता।
+<p id="percent">0% Complete</p>
 
 </div>
 
 
 <!-- LEVEL 1 -->
+
 <div class="level">
 
 <h3>🟢 LEVEL 1 — ZERO TO BEGINNER</h3>
 
-<div class="lessons">
+<div class="lessons" id="level1"></div>
+
+</div>
+
+
+<!-- LEVEL 2 -->
+
+<div class="level">
+
+<h3>🔵 LEVEL 2 — CHART & TECHNICAL BASICS</h3>
+
+<div class="lessons" id="level2"></div>
+
+</div>
+
+
+<!-- LEVEL 3 -->
+
+<div class="level">
+
+<h3>🟣 LEVEL 3 — COMPANY ANALYSIS</h3>
+
+<div class="lessons" id="level3"></div>
+
+</div>
+
+
+<!-- LEVEL 4 -->
+
+<div class="level">
+
+<h3>🔴 LEVEL 4 — ADVANCED & RISK</h3>
+
+<div class="lessons" id="level4"></div>
+
+</div>
+
+
+<!-- LESSON VIEWER -->
+
+<div class="viewer" id="viewer">
+
+<h2 id="lessonTitle"></h2>
+
+<div id="lessonText"></div>
+
+<div class="quiz">
+
+<h3>📝 Quick Quiz</h3>
+
+<p id="question"></p>
+
+<div id="answers"></div>
+
+<button class="btn" onclick="checkAnswer()">
+Check Answer
+</button>
+
+<p id="result"></p>
+
+</div>
+
+<button class="btn" onclick="completeLesson()">
+✅ Complete Lesson
+</button>
+
+<button class="btn" onclick="nextLesson()">
+➡️ Next Lesson
+</button>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2 class="title">👨‍🎓 About</h2>
+
+<div class="lesson-card">
+
+<h3>Krishna Kumar Learning Website</h3>
+
+<p>
+यह website Stock Market को basic से advanced concepts
+तक educational तरीके से सीखने के लिए बनाई गई है।
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Krishna Kumar</p>
+
+<p>Learn • Practice • Understand Risk</p>
+
+</footer>
+
 
 <script>
+
+/* =========================
+   COURSE DATA
+========================= */
+
 const lessons = [
+
+/* LEVEL 1 */
 
 {
 id:1,
 title:"Stock Market क्या है?",
-desc:"Stock Market का बिल्कुल basic introduction.",
-content:`
-<p>Stock Market वह market है जहाँ listed companies के shares की खरीद-बिक्री होती है।</p>
-<div class="example"><b>Example:</b> किसी कंपनी के कुल 1,00,000 shares हैं और आपके पास 100 shares हैं, तो आप कंपनी का बहुत छोटा हिस्सा रखते हैं।</div>
-<ul>
-<li>Share = कंपनी में ownership का छोटा हिस्सा</li>
-<li>Stock Exchange = shares की trading का organised marketplace</li>
-<li>Price demand और supply सहित कई factors से बदलती है</li>
-</ul>`
+text:"Stock Market एक organised market है जहाँ listed companies की securities की खरीद-बिक्री होती है।",
+q:"Stock Market में क्या खरीदा-बेचा जा सकता है?",
+a:["Shares/Securities","कपड़े","मोबाइल","खाना"],
+correct:0
 },
 
 {
 id:2,
 title:"Share क्या होता है?",
-desc:"Company के हिस्से को समझें.",
-content:`
-<p>Share किसी कंपनी में ownership का एक छोटा हिस्सा represent करता है।</p>
-<div class="example">अगर कंपनी shares issue करती है, तो share खरीदने वाला व्यक्ति shareholder बन सकता है।</div>`
+text:"Share किसी कंपनी में ownership का छोटा हिस्सा represent कर सकता है।",
+q:"Share किससे जुड़ा है?",
+a:["Company ownership","Weather","Electricity","Salary"],
+correct:0
 },
 
 {
 id:3,
 title:"Company पैसे क्यों जुटाती है?",
-desc:"Companies capital क्यों raise करती हैं?",
-content:`
-<p>कंपनियाँ business expansion, projects, debt management और दूसरे corporate purposes के लिए capital जुटा सकती हैं।</p>`
+text:"Company business expansion, projects और अन्य जरूरतों के लिए capital raise कर सकती है।",
+q:"Company capital क्यों raise कर सकती है?",
+a:["Business जरूरतों के लिए","Weather बदलने के लिए","Game खेलने के लिए","कुछ नहीं"],
+correct:0
 },
 
 {
 id:4,
 title:"NSE और BSE",
-desc:"भारत के प्रमुख stock exchanges.",
-content:`
-<p><b>NSE</b> और <b>BSE</b> भारत के प्रमुख stock exchanges हैं।</p>
-<p>Stock exchange का काम securities की trading के लिए organised market infrastructure उपलब्ध कराना है।</p>`
+text:"NSE और BSE भारत के प्रमुख stock exchanges हैं।",
+q:"भारत के दो प्रमुख stock exchanges कौन से हैं?",
+a:["NSE और BSE","NASA और ESA","WHO और WTO","None"],
+correct:0
 },
 
 {
 id:5,
 title:"IPO क्या है?",
-desc:"Initial Public Offering को समझें.",
-content:`
-<p>IPO यानी Initial Public Offering। इसमें कोई company पहली बार public investors को shares offer कर सकती है।</p>
-<div class="example">IPO को समझते समय company का business, risks और offer documents पढ़ना जरूरी है।</div>`
+text:"IPO यानी Initial Public Offering। इसमें company public को shares offer कर सकती है।",
+q:"IPO का full form क्या है?",
+a:["Initial Public Offering","Indian Price Order","Internal Public Office","None"],
+correct:0
 },
 
 {
 id:6,
 title:"Investor और Trader",
-desc:"दोनों में basic difference.",
-content:`
-<p><b>Investor</b> आमतौर पर लंबे समय के नजरिए से investment करता है।</p>
-<p><b>Trader</b> short-term price movements पर focus कर सकता है।</p>
-<p>दोनों में risk होता है।</p>`
+text:"Investor आमतौर पर longer-term approach रख सकता है, जबकि trader shorter-term price movement पर focus कर सकता है।",
+q:"Investor और Trader में क्या अंतर हो सकता है?",
+a:["Time horizon/approach","कोई अंतर नहीं","दोनों हमेशा intraday","None"],
+correct:0
 },
 
 {
 id:7,
 title:"Demat Account",
-desc:"Demat का basic concept.",
-content:`
-<p>Demat account electronic form में securities रखने के लिए इस्तेमाल होता है।</p>
-<p>Trading और investment के लिए regulated intermediary और applicable rules को समझना जरूरी है।</p>`
+text:"Demat account securities को electronic form में रखने के लिए इस्तेमाल होता है।",
+q:"Demat account किसलिए इस्तेमाल होता है?",
+a:["Securities रखने के लिए","Food रखने के लिए","Email भेजने के लिए","None"],
+correct:0
 },
 
 {
 id:8,
 title:"Buy और Sell",
-desc:"Market order और price concept.",
-content:`
-<p>Buy का मतलब security खरीदने का order देना और Sell का मतलब बेचने का order देना है।</p>
-<p>Orders के अलग-अलग types होते हैं। उन्हें समझे बिना real-money trading नहीं करनी चाहिए।</p>`
+text:"Buy का मतलब खरीदने का order और Sell का मतलब बेचने का order होता है।",
+q:"Sell का अर्थ क्या है?",
+a:["बेचने का order","खरीदने का order","Account बंद करना","None"],
+correct:0
 },
 
 {
 id:9,
 title:"Market Risk",
-desc:"Risk को समझना.",
-content:`
-<p>Stock prices ऊपर भी जा सकती हैं और नीचे भी। इसलिए loss की संभावना हमेशा रहती है।</p>
-<div class="example"><b>Rule:</b> पहले risk समझो, फिर किसी decision के बारे में सोचो।</div>`
+text:"Market में price ऊपर या नीचे जा सकती है। Profit guaranteed नहीं होता।",
+q:"Stock Market में क्या guaranteed है?",
+a:["Profit","Loss","कुछ भी guaranteed नहीं","Fixed return"],
+correct:2
 },
 
 {
 id:10,
 title:"Paper Trading",
-desc:"बिना real money के practice.",
-content:`
-<p>Paper trading में hypothetical buy/sell decisions लिखकर practice की जाती है।</p>
-<p>इससे chart reading और discipline की practice हो सकती है, बिना वास्तविक पैसे लगाए।</p>`
+text:"Paper Trading में बिना वास्तविक पैसे लगाए hypothetical trades की practice की जाती है।",
+q:"Paper Trading में क्या किया जाता है?",
+a:["Hypothetical practice","Real money जरूरी","Loan लिया जाता है","None"],
+correct:0
 },
+
 
 /* LEVEL 2 */
 
 {
 id:11,
-title:"Candlestick क्या है?",
-desc:"Chart की basic candle.",
-content:`
-<p>Candlestick किसी निश्चित समय में price movement को दिखाती है।</p>
-<ul>
-<li>Open</li>
-<li>High</li>
-<li>Low</li>
-<li>Close</li>
-</ul>`
+title:"Candlestick",
+text:"Candlestick किसी निश्चित समय में price movement को दिखाती है।",
+q:"Candlestick क्या दिखा सकती है?",
+a:["Price movement","Weather","Salary","None"],
+correct:0
 },
 
 {
 id:12,
-title:"Open, High, Low, Close",
-desc:"OHLC को समझें.",
-content:`
-<p><b>Open:</b> period की शुरुआती price.</p>
-<p><b>High:</b> period की सबसे ऊँची price.</p>
-<p><b>Low:</b> period की सबसे कम price.</p>
-<p><b>Close:</b> period की ending price.</p>`
+title:"OHLC",
+text:"OHLC का अर्थ Open, High, Low और Close है।",
+q:"OHLC में C क्या है?",
+a:["Close","Company","Cash","Capital"],
+correct:0
 },
 
 {
 id:13,
 title:"Timeframe",
-desc:"1 minute से 1 day तक.",
-content:`
-<p>Timeframe बताता है कि एक candle कितना समय represent करती है।</p>
-<p>जैसे 5-minute chart में एक candle 5 मिनट का price data दिखा सकती है।</p>`
+text:"Timeframe बताता है कि एक candle कितना समय represent करती है।",
+q:"Timeframe क्या बताता है?",
+a:["Candle की time अवधि","Company size","Tax rate","None"],
+correct:0
 },
 
 {
 id:14,
 title:"Volume",
-desc:"Trading volume का concept.",
-content:`
-<p>Volume किसी period में traded quantity/activity को समझने में मदद करता है।</p>
-<p>Price के साथ volume को देखना analysis का एक हिस्सा हो सकता है।</p>`
+text:"Volume traded activity/quantity को समझने में मदद करता है।",
+q:"Volume किससे जुड़ा है?",
+a:["Trading activity","Weather","Salary","None"],
+correct:0
 },
 
 {
 id:15,
 title:"Trend",
-desc:"Uptrend, Downtrend और Sideways.",
-content:`
-<p><b>Uptrend:</b> price structure broadly ऊपर की ओर हो सकता है।</p>
-<p><b>Downtrend:</b> price structure broadly नीचे की ओर हो सकता है।</p>
-<p><b>Sideways:</b> price एक range में घूम सकता है।</p>`
+text:"Uptrend, Downtrend और Sideways market price structure को समझने में मदद करते हैं।",
+q:"Uptrend सामान्यतः किस दिशा को दर्शाता है?",
+a:["ऊपर की ओर","नीचे की ओर","कोई movement नहीं","None"],
+correct:0
 },
 
 {
 id:16,
 title:"Support",
-desc:"Support level का basic idea.",
-content:`
-<p>Support ऐसा price area हो सकता है जहाँ historical buying interest दिखाई दे सकता है।</p>
-<p>यह कोई guaranteed floor नहीं है।</p>`
+text:"Support एक ऐसा price area हो सकता है जहाँ historical buying interest दिखाई दे।",
+q:"Support क्या हो सकता है?",
+a:["Buying-interest area","Guaranteed floor","Bank account","None"],
+correct:0
 },
 
 {
 id:17,
 title:"Resistance",
-desc:"Resistance level समझें.",
-content:`
-<p>Resistance ऐसा price area हो सकता है जहाँ historical selling interest दिखाई दे सकता है।</p>
-<p>यह guaranteed ceiling नहीं है।</p>`
+text:"Resistance एक ऐसा price area हो सकता है जहाँ historical selling interest दिखाई दे।",
+q:"Resistance क्या हो सकता है?",
+a:["Selling-interest area","Guaranteed ceiling","Salary","None"],
+correct:0
 },
 
 {
 id:18,
 title:"Chart Patterns",
-desc:"Patterns को observe करना.",
-content:`
-<p>Charts में अलग-अलग price patterns दिखाई दे सकते हैं।</p>
-<p>किसी pattern को देखकर profit guaranteed नहीं होता। इसलिए historical examples पर practice करें।</p>`
+text:"Chart patterns historical price behaviour को observe करने में मदद कर सकते हैं, लेकिन profit guarantee नहीं देते।",
+q:"क्या chart pattern profit guarantee करता है?",
+a:["हाँ","नहीं","100%","हमेशा"],
+correct:1
 },
 
 {
 id:19,
 title:"Moving Average",
-desc:"Indicator का basic concept.",
-content:`
-<p>Moving Average past prices का average smooth करके trend को observe करने में मदद कर सकता है।</p>`
+text:"Moving Average past prices को smooth करके trend observe करने में मदद कर सकता है।",
+q:"Moving Average किसलिए इस्तेमाल हो सकता है?",
+a:["Trend observe करने के लिए","Tax भरने के लिए","Account खोलने के लिए","None"],
+correct:0
 },
 
 {
 id:20,
 title:"Technical Analysis",
-desc:"Chart-based analysis.",
-content:`
-<p>Technical analysis में price, volume और indicators जैसे market data का अध्ययन किया जाता है।</p>
-<p>यह भविष्य की price की guarantee नहीं देता।</p>`
+text:"Technical Analysis में price, volume और indicators जैसे market data का अध्ययन किया जाता है।",
+q:"Technical Analysis किसका अध्ययन करता है?",
+a:["Price/Volume data","Weather","Salary","None"],
+correct:0
 },
+
 
 /* LEVEL 3 */
 
 {
 id:21,
 title:"Company का Business",
-desc:"कंपनी वास्तव में क्या करती है?",
-content:`
-<p>किसी company को समझने की शुरुआत उसके business model से करें।</p>
-<ul>
-<li>Company क्या बेचती है?</li>
-<li>Customer कौन हैं?</li>
-<li>Revenue कहाँ से आता है?</li>
-<li>Competition कौन है?</li>
-</ul>`
+text:"Company analysis की शुरुआत उसके business model को समझने से की जा सकती है।",
+q:"Company research की शुरुआत किससे करें?",
+a:["Business model","Random tip","Rumour","None"],
+correct:0
 },
 
 {
 id:22,
 title:"Revenue",
-desc:"Company की sales समझें.",
-content:`
-<p>Revenue company की sales/income का एक महत्वपूर्ण financial measure है।</p>
-<p>Revenue बढ़ना अकेले पर्याप्त नहीं है; profitability और cash flow भी देखना चाहिए।</p>`
+text:"Revenue company की sales/income का एक महत्वपूर्ण financial measure है।",
+q:"Revenue किससे जुड़ा है?",
+a:["Sales/Income","Password","Weather","None"],
+correct:0
 },
 
 {
 id:23,
 title:"Profit",
-desc:"Profit और loss.",
-content:`
-<p>Profit वह amount है जो applicable expenses आदि को revenue से घटाने के बाद बचता है।</p>`
+text:"Profit company की earnings को समझने का महत्वपूर्ण measure है।",
+q:"Profit किससे जुड़ा है?",
+a:["Earnings","Weather","Password","None"],
+correct:0
 },
 
 {
 id:24,
 title:"Debt",
-desc:"Company का कर्ज.",
-content:`
-<p>Debt company की financial structure का महत्वपूर्ण हिस्सा है।</p>
-<p>Debt को company की earnings और cash flows के context में देखना चाहिए।</p>`
+text:"Debt company की borrowed funds और financial obligations को समझने में मदद करता है।",
+q:"Debt क्या दर्शाता है?",
+a:["Borrowed funds/obligations","Revenue only","Weather","None"],
+correct:0
 },
 
 {
 id:25,
 title:"EPS",
-desc:"Earnings Per Share.",
-content:`
-<p>EPS यानी Earnings Per Share। यह company की earnings को per-share basis पर समझने का एक measure है।</p>`
+text:"EPS यानी Earnings Per Share। यह earnings को per-share basis पर समझने में मदद करता है।",
+q:"EPS का full form क्या है?",
+a:["Earnings Per Share","Equity Price Sale","Estimated Profit Share","None"],
+correct:0
 },
 
 {
 id:26,
 title:"P/E Ratio",
-desc:"Price to Earnings.",
-content:`
-<p>P/E ratio market price को earnings per share के संदर्भ में देखने का एक valuation measure है।</p>
-<p>इसे अकेले देखकर decision नहीं लेना चाहिए।</p>`
+text:"P/E ratio price को earnings के संदर्भ में देखने का valuation measure है।",
+q:"P/E किससे जुड़ा है?",
+a:["Price और Earnings","Weather","Salary","None"],
+correct:0
 },
 
 {
 id:27,
 title:"P/B Ratio",
-desc:"Price to Book.",
-content:`
-<p>P/B ratio market value को book value के संदर्भ में देखने का एक valuation measure है।</p>`
+text:"P/B ratio price को book value के संदर्भ में देखने का valuation measure है।",
+q:"P/B किससे जुड़ा है?",
+a:["Price और Book Value","Weather","Tax","None"],
+correct:0
 },
 
 {
 id:28,
 title:"Cash Flow",
-desc:"Cash कहाँ से आ रहा है?",
-content:`
-<p>Cash flow statements company के cash inflows और outflows को समझने में मदद करते हैं।</p>
-<p>Profit और cash flow हमेशा एक ही चीज नहीं होते।</p>`
+text:"Cash Flow statement company के cash inflows और outflows को समझने में मदद करता है।",
+q:"Cash Flow क्या track करता है?",
+a:["Cash inflows/outflows","Weather","Only share price","None"],
+correct:0
 },
 
 {
 id:29,
 title:"Annual Report",
-desc:"Company report पढ़ना.",
-content:`
-<p>Annual report में company की financial information, business discussion, risks और अन्य महत्वपूर्ण disclosures मिल सकते हैं।</p>`
+text:"Annual Report में financial information, business discussion और risks जैसी जानकारी मिल सकती है।",
+q:"Annual Report में क्या मिल सकता है?",
+a:["Financial information","Only memes","Only games","None"],
+correct:0
 },
 
 {
 id:30,
 title:"Fundamental Analysis",
-desc:"Company को business के आधार पर समझना.",
-content:`
-<p>Fundamental analysis में business, financial statements, valuation, industry और risks जैसे factors का अध्ययन किया जाता है।</p>`
+text:"Fundamental Analysis में company के business, financials, valuation, industry और risks का अध्ययन किया जा सकता है।",
+q:"Fundamental Analysis में क्या देखा जाता है?",
+a:["Business और financial factors","Weather","Random tips","None"],
+correct:0
 },
+
 
 /* LEVEL 4 */
 
 {
 id:31,
 title:"Risk Management",
-desc:"सबसे जरूरी skill.",
-content:`
-<p>Risk management का उद्देश्य potential loss को समझना और manage करना है।</p>
-<div class="example"><b>Golden Rule:</b> किसी भी trade या investment में ऐसा पैसा risk में नहीं डालना चाहिए जिसे खोना आपकी financial situation को गंभीर रूप से नुकसान पहुँचा दे।</div>`
+text:"Risk Management का उद्देश्य potential loss को समझना और manage करना है।",
+q:"Risk Management क्यों जरूरी है?",
+a:["Potential loss manage करने के लिए","Profit guarantee के लिए","Tax हटाने के लिए","None"],
+correct:0
 },
 
 {
 id:32,
 title:"Diversification",
-desc:"एक ही जगह पूरा risk क्यों नहीं?",
-content:`
-<p>Diversification का मतलब risk को अलग-अलग investments/assets में spread करना हो सकता है।</p>
-<p>यह loss की guarantee खत्म नहीं करता।</p>`
+text:"Diversification में investments को अलग-अलग assets/securities में spread किया जा सकता है।",
+q:"Diversification का उद्देश्य क्या हो सकता है?",
+a:["Risk spread करना","Loss खत्म करना","Price fix करना","None"],
+correct:0
 },
 
 {
 id:33,
 title:"Trading Psychology",
-desc:"Emotion और discipline.",
-content:`
-<p>Fear, greed और overconfidence decisions को प्रभावित कर सकते हैं।</p>
-<p>Rules, patience और trading journal discipline में मदद कर सकते हैं।</p>`
+text:"Fear, greed और overconfidence decisions को प्रभावित कर सकते हैं। Discipline जरूरी है।",
+q:"Trading Psychology में क्या महत्वपूर्ण है?",
+a:["Discipline","Rumour","Luck","None"],
+correct:0
 },
 
 {
 id:34,
 title:"Trading Journal",
-desc:"अपने decisions record करें.",
-content:`
-<p>Journal में date, reason, setup, result और सीख जैसी चीजें लिखी जा सकती हैं।</p>
-<p>इससे अपनी गलतियों और habits को review करना आसान हो सकता है।</p>`
+text:"Trading Journal में अपने decisions, reasons, results और learning को record किया जा सकता है।",
+q:"Trading Journal किसलिए है?",
+a:["Learning record करने के लिए","Password रखने के लिए","Tax जमा करने के लिए","None"],
+correct:0
 },
 
 {
 id:35,
 title:"Backtesting",
-desc:"Historical data पर strategy test.",
-content:`
-<p>Backtesting में किसी strategy को historical market data पर test किया जाता है।</p>
-<p>Past performance future results की guarantee नहीं होती।</p>`
+text:"Backtesting में strategy को historical market data पर test किया जाता है।",
+q:"Backtesting किस data पर किया जाता है?",
+a:["Historical data","Future guaranteed data","Weather data","None"],
+correct:0
 },
 
 {
 id:36,
-title:"Zero to Advanced Revision",
-desc:"पूरे course का final revision.",
-content:`
-<p>अब पूरे course को revise करें:</p>
-<ul>
-<li>Stock Market Basics</li>
-<li>Charts & Candlesticks</li>
-<li>Technical Analysis</li>
-<li>Company Research</li>
-<li>Fundamental Analysis</li>
-<li>Risk Management</li>
-<li>Paper Trading</li>
-<li>Trading Psychology</li>
-</ul>
-<div class="example"><b>Final Rule:</b> पहले सीखना → फिर paper practice → फिर अपने knowledge और risk tolerance को समझना। जल्दबाजी नहीं।</div>`
+title:"Final Revision",
+text:"अब पूरे course को revise करें: Basics, Charts, Company Analysis, Fundamental Analysis, Risk Management और Paper Trading।",
+q:"Course के बाद सबसे अच्छी approach क्या है?",
+a:["सीखना और practice करना","तुरंत बड़ा पैसा लगाना","Random tips follow करना","Luck पर निर्भर रहना"],
+correct:0
 }
 
 ];
 
-let currentLesson = 0;
-let completed = JSON.parse(localStorage.getItem("completedLessons") || "[]");
+
+/* =========================
+   APP LOGIC
+========================= */
+
+let current = 0;
+
+let completed =
+JSON.parse(localStorage.getItem("krishnaCompleted") || "[]");
+
+
+function makeCard(lesson){
+
+    return `
+    <div class="lesson-card ${completed.includes(lesson.id) ? "done" : ""}"
+         id="card-${lesson.id}">
+
+        <h4>LESSON ${lesson.id}</h4>
+
+        <h3>${lesson.title}</h3>
+
+        <p>${lesson.text}</p>
+
+        <button class="btn"
+        onclick="openLesson(${lesson.id})">
+        Start Lesson →
+        </button>
+
+    </div>
+    `;
+}
+
+
+function loadCards(){
+
+    document.getElementById("level1").innerHTML =
+        lessons.slice(0,10).map(makeCard).join("");
+
+    document.getElementById("level2").innerHTML =
+        lessons.slice(10,20).map(makeCard).join("");
+
+    document.getElementById("level3").innerHTML =
+        lessons.slice(20,30).map(makeCard).join("");
+
+    document.getElementById("level4").innerHTML =
+        lessons.slice(30,36).map(makeCard).join("");
+
+    updateProgress();
+}
+
 
 function openLesson(id){
 
-    currentLesson = lessons.findIndex(l => l.id === id);
+    current =
+        lessons.findIndex(x => x.id === id);
 
-    const lesson = lessons[currentLesson];
+    const lesson = lessons[current];
 
-    document.getElementById("lessonViewer").style.display = "block";
+    document.getElementById("viewer").style.display =
+        "block";
 
-    document.getElementById("lessonTitle").innerHTML =
-        "Lesson " + lesson.id + ": " + lesson.title;
+    document.getElementById("lessonTitle").innerText =
+        "Lesson " + lesson.id + " — " + lesson.title;
 
-    document.getElementById("lessonContent").innerHTML =
-        lesson.content;
+    document.getElementById("lessonText").innerHTML = `
+        <p>${lesson.text}</p>
 
-    document.getElementById("quizQuestion").innerHTML =
-        getQuestion(lesson.id);
+        <div class="example">
+        💡 <b>Learning Tip:</b>
+        इस concept को समझने के बाद अपने शब्दों में दोबारा समझाने की कोशिश करें।
+        </div>
+    `;
 
-    document.getElementById("quizOptions").innerHTML =
-        getOptions(lesson.id);
+    document.getElementById("question").innerText =
+        lesson.q;
 
-    document.getElementById("quizResult").innerHTML = "";
+    document.getElementById("answers").innerHTML =
+        lesson.a.map((x,i)=>`
+        <label>
+        <input type="radio"
+               name="answer"
+               value="${i}">
+        ${x}
+        </label>
+        `).join("");
 
-    document.getElementById("lessonViewer").scrollIntoView({
-        behavior:"smooth"
-    });
+    document.getElementById("result").innerText = "";
+
+    document.getElementById("viewer")
+        .scrollIntoView({behavior:"smooth"});
 }
+
+
+function checkAnswer(){
+
+    const selected =
+        document.querySelector(
+            'input[name="answer"]:checked'
+        );
+
+    if(!selected){
+
+        document.getElementById("result").innerText =
+            "⚠️ पहले एक answer चुनो।";
+
+        return;
+    }
+
+    if(Number(selected.value) === lessons[current].correct){
+
+        document.getElementById("result").innerText =
+            "✅ सही जवाब! बहुत बढ़िया।";
+
+    }else{
+
+        document.getElementById("result").innerText =
+            "❌ गलत जवाब। Lesson को फिर से पढ़कर कोशिश करो।";
+    }
+}
+
 
 function completeLesson(){
 
-    const id = lessons[currentLesson].id;
+    const id = lessons[current].id;
 
     if(!completed.includes(id)){
+
         completed.push(id);
+
         localStorage.setItem(
-            "completedLessons",
+            "krishnaCompleted",
             JSON.stringify(completed)
         );
+
     }
 
     updateProgress();
 
-    if(currentLesson < lessons.length - 1){
-        openLesson(lessons[currentLesson + 1].id);
+    const card =
+        document.getElementById("card-" + id);
+
+    if(card){
+        card.classList.add("done");
+    }
+
+    document.getElementById("result").innerText =
+        "🎉 Lesson " + id + " Complete!";
+}
+
+
+function nextLesson(){
+
+    if(current < lessons.length - 1){
+
+        openLesson(
+            lessons[current + 1].id
+        );
+
     }else{
-        alert("🎉 आपने पूरा course complete कर लिया!");
+
+        alert(
+            "🎉 Congratulations! आपने सभी 36 Lessons complete कर लिए!"
+        );
+
     }
 }
 
+
 function updateProgress(){
 
-    document.getElementById("completedCount").innerText =
-        completed.length;
+    const total = lessons.length;
 
-    let percent =
-        Math.round((completed.length / lessons.length) * 100);
+    const done = completed.length;
+
+    const percent =
+        Math.round((done / total) * 100);
+
+    document.getElementById("count").innerText =
+        done;
 
     document.getElementById("progress").style.width =
         percent + "%";
 
-    document.getElementById("progressText").innerText =
+    document.getElementById("percent").innerText =
         percent + "% Complete";
-
-    document.querySelectorAll(".lesson-card").forEach(card => {
-
-        const id = Number(card.dataset.id);
-
-        if(completed.includes(id)){
-            card.classList.add("completed");
-        }
-
-    });
 }
 
-function getQuestion(id){
 
-    const questions = {
+loadCards();
 
-1:"Stock Market में मुख्य रूप से क्या trade होता है?",
-2:"Share क्या represent करता है?",
-3:"Company capital क्यों raise कर सकती है?",
-4:"भारत के दो प्रमुख stock exchanges कौन से हैं?",
-5:"IPO का full form क्या है?",
-6:"Trader और Investor में एक basic difference क्या है?",
-7:"Demat account का basic purpose क्या है?",
-8:"Sell का अर्थ क्या है?",
-9:"Stock Market में क्या guaranteed है?",
-10:"Paper Trading में क्या इस्तेमाल होता है?",
-11:"Candlestick क्या दिखा सकती है?",
-12:"OHLC में C का अर्थ क्या है?",
-13:"Timeframe क्या बताता है?",
-14:"Volume किससे जुड़ा है?",
-15:"Uptrend किस दिशा का movement दर्शाता है?",
-16:"Support क्या हो सकता है?",
-17:"Resistance क्या हो सकता है?",
-18:"Chart pattern profit की guarantee देता है?",
-19:"Moving Average किस काम आ सकता है?",
-20:"Technical Analysis में क्या study किया जाता है?",
-21:"Company research की शुरुआत किससे करें?",
-22:"Revenue क्या है?",
-23:"Profit क्या है?",
-24:"Debt क्या दर्शाता है?",
-25:"EPS का full form क्या है?",
-26:"P/E किससे जुड़ा valuation measure है?",
-27:"P/B किससे जुड़ा है?",
-28:"Cash Flow क्या track करता है?",
-29:"Annual Report में क्या मिल सकता है?",
-30:"Fundamental Analysis में क्या देखा जाता है?",
-31:"Risk Management क्यों जरूरी है?",
-32:"Diversification का उद्देश्य क्या हो सकता है?",
-33:"Trading Psychology में क्या महत्वपूर्ण है?",
-34:"Trading Journal किसलिए है?",
-35:"Backtesting किस data पर किया जाता है?",
-36:"Course complete करने के बाद सबसे जरूरी approach क्या है?"
-};
+</script>
 
-return questions[id];
-}
-
-function getOptions(id){
-
-const options = {
-
-1:["Shares","Weather","Electricity","None"],
-2:["Company ownership का हिस्सा","Bank password","Tax","Salary"],
-3:["Business needs के लिए capital","सिर्फ entertainment","Weather","None"],
-4:["NSE और BSE","NASA और ESA","WHO और WTO","None"],
-5:["Initial Public Offering","Indian Price Order","Internal Public Office","None"],
-6:["Time horizon और approach अलग हो सकते हैं","दोनों हमेशा same हैं","Investor हमेशा intraday करता है","None"],
-7:["Securities को electronic form में रखने के लिए","Food रखने के लिए","Email भेजने के लिए","None"],
-8:["Security बेचने का order","Security खरीदना","Account बंद करना","None"],
-9:["Profit","Loss","कुछ भी guaranteed नहीं","Fixed return"],
-10:["Hypothetical trades","Real cash only","Loan","None"],
-11:["Price movement","Weather","Salary","None"],
-12:["Close","Company","Cash","Capital"],
-13:["एक candle/price data की अवधि","Company का size","Tax rate","None"],
-14:["Traded activity/quantity","Weather","Salary","None"],
-15:["Generally upward","Always downward","No movement","None"],
-16:["Historical buying-interest area","Guaranteed floor","Bank account","None"],
-17:["Historical selling-interest area","Guaranteed ceiling","Salary","None"],
-18:["नहीं","हाँ हमेशा","100%","Only Monday"],
-19:["Price data को smooth करके trend observe करना","Tax भरना","Account खोलना","None"],
-20:["Price/volume और related data","Weather","Salary","None"],
-21:["Business model","Random tip","Rumour","None"],
-22:["Sales/income measure","Debt only","Share count only","None"],
-23:["Expenses के बाद बची earnings का measure","Share price","Tax form","None"],
-24:["Borrowed funds/obligations","Revenue only","Weather","None"],
-25:["Earnings Per Share","Equity Price Sale","Estimated Profit Share","None"],
-26:["Price और earnings","Weather","Salary","None"],
-27:["Price और book value","Weather","Tax","None"],
-28:["Cash inflows और outflows","Only profit","Only price","None"],
-29:["Financial information और disclosures","Only memes","Only advertisements","None"],
-30:["Business और financial factors","Weather","Random tips","None"],
-31:["Potential loss को manage करने के लिए","Profit guarantee के लिए","Tax हटाने के लिए","None"],
-32:["Risk spread करने में मदद","Loss guarantee खत्म करना","Price fix करना","None"],
-33:["Discipline और emotions","Rumours","Luck","None"],
-34:["Decisions और learning record करने के लिए","Password रखने के लिए","Tax जमा करने के लिए","None"],
-35:["Historical data","Future guaranteed data","Weather data","None"],
-36:["सीखना → practice → risk समझना","तुरंत बड़ा पैसा लगाना","Tips follow करना","None"
+</body>
+</html>
